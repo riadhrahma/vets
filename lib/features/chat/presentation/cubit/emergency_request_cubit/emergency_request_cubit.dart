@@ -12,6 +12,4 @@ class EmergencyRequestCubit extends Cubit<EmergencyRequestState> {
     selectedPet = value;
     emit(PetSelectedState(value));
   }
-
-
 }

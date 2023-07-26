@@ -1,6 +1,5 @@
 part of 'add_pet_cubit.dart';
 
-
 abstract class AddPetState {}
 
 class Loading extends AddPetState {}

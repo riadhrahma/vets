@@ -20,7 +20,6 @@ class SignInBloc extends Cubit<SignInState> {
   String? email;
   String? password;
 
-
   SignInBloc({
     required this.signInProcessUseCase,
     required this.getCachedClientInfoUseCase,

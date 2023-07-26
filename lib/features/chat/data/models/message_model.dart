@@ -5,7 +5,7 @@ import 'message_content_model.dart';
 
 // ignore: must_be_immutable
 class MessageModel extends MessageEntity {
-   MessageModel({
+  MessageModel({
     required super.id,
     required super.senderID,
     required super.sendAt,
@@ -21,8 +21,7 @@ class MessageModel extends MessageEntity {
       senderID: json['senderID'],
       senderRole: json['senderRole'],
       recipientID: json['recipientID'],
-      messageContentModel:
-          MessageContentModel.formJson(json['messageContent']),
+      messageContentModel: MessageContentModel.formJson(json['messageContent']),
       channelID: json['channelID'],
     );
   }
@@ -36,7 +35,7 @@ class MessageModel extends MessageEntity {
         'channelID': channelID,
       };
 
-  set setMessageContent(value){
-    messageContentModel=value;
+  set setMessageContent(value) {
+    messageContentModel = value;
   }
 }

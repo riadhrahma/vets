@@ -11,7 +11,7 @@ class MessageContentEntity extends Equatable {
   });
   @override
   List<Object?> get props => [
-    contentType,
+        contentType,
         value,
       ];
 }

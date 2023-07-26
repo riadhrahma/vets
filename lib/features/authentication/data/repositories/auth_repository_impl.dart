@@ -327,7 +327,8 @@ class AuthRepositoryImpl implements AuthRepository {
         clinicID: clientEntity.clinicID,
         clientCode: clientEntity.clientCode,
         isEmergencyAgent: clientEntity.isEmergencyAgent,
-        fcmToken: clientEntity.fcmToken, gender: clientEntity.gender,
+        fcmToken: clientEntity.fcmToken,
+        gender: clientEntity.gender,
       );
       await authOnlineDataSource.signupClientProcess(clientModel, password);
       return right(unit);

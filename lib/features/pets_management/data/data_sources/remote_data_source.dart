@@ -69,12 +69,11 @@ class FirebasePetMangementDataSource implements PetManagmentRemoteDataSource {
         return PetModel.fromJson(e.data() as Map<String, dynamic>);
       }).toList();
       return petsList;
-    } on ServerException  catch(e){
-
+    } on ServerException catch (e) {
       throw ServerException(e.code);
     } catch (e) {
-
-;      throw ServerException('');
+      ;
+      throw ServerException('');
     }
   }
 
@@ -138,7 +137,6 @@ class FirebasePetMangementDataSource implements PetManagmentRemoteDataSource {
   Future<String> uploadFile(
     String filePath,
   ) async {
-    
     final storageRef = FirebaseStorage.instance.ref();
     final String fileFormat = filePath.split('.').last;
     final String imageName = const Uuid().v1();

@@ -30,7 +30,7 @@ class ProfileDataSourceImpl implements ProfileOnlineDataSource {
   Future<Unit> updateProfile(ClientEntity clientEntity) async {
     try {
       ClientModel clientModel = ClientModel(
-        gender:  clientEntity.gender,
+        gender: clientEntity.gender,
         id: clientEntity.id,
         address: clientEntity.address,
         email: clientEntity.email,

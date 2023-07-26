@@ -9,5 +9,4 @@ abstract class ProfileRepository {
   Future<Either<Failure, Unit>> updateProfile(
     ClientEntity clientEntity,
   );
-
 }

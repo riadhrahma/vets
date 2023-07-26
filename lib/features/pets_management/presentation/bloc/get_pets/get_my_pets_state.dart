@@ -1,5 +1,3 @@
-
-
 import 'package:equatable/equatable.dart';
 import 'package:vets_project/features/pets_management/domain/entities/pet_entity.dart';
 

@@ -1,6 +1,5 @@
 part of 'emergency_chat_bloc.dart';
 
-
 abstract class EmergencyChatEvent {}
 
 class GetChannelMessages extends EmergencyChatEvent {
@@ -39,17 +38,11 @@ class SendDocumentMessageEvent extends EmergencyChatEvent {
 
   SendDocumentMessageEvent(
     this.channelId,
-
   );
-
-
 }
 
-class DeleteMessageEvent extends EmergencyChatEvent{
+class DeleteMessageEvent extends EmergencyChatEvent {
   final String messageId;
 
   DeleteMessageEvent(this.messageId);
-
 }
-
-

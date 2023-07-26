@@ -60,7 +60,7 @@ class _CustomLoginFormFieldState extends State<CustomLoginFormField> {
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               errorBorder: InputBorder.none,
-              suffixIcon: widget.suffixIcon ,
+              suffixIcon: widget.suffixIcon,
               label: Text(
                 widget.labelText,
                 style: TextStyles.smallTextStyle.copyWith(

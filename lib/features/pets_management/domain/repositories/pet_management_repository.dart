@@ -13,11 +13,10 @@ abstract class PetsMangementRepository {
   Future<Either<Failure, Unit>> deleteMyPet(String petID);
 
   Future<Either<Failure, XFile?>> pickFiles(
-      ImageSource imageSource,
-      ContentType contentType,
-      );
+    ImageSource imageSource,
+    ContentType contentType,
+  );
   Future<Either<Failure, String>> uploadFile(
-      String filePath,
-      );
-
+    String filePath,
+  );
 }

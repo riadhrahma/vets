@@ -1,6 +1,5 @@
 part of 'emergency_chat_bloc.dart';
 
-
 abstract class EmergencyChatState {}
 
 class EmergencyChatInitial extends EmergencyChatState {}
@@ -21,7 +20,6 @@ class SendImageMessageSuccess extends EmergencyChatState {}
 
 class SendImageMessageFailed extends EmergencyChatState {}
 
-
 class SendDocumentMessageSuccess extends EmergencyChatState {}
 
 class SendDocumentMessageFailed extends EmergencyChatState {}
@@ -34,9 +32,6 @@ class GetChannelMessagesSuccess extends EmergencyChatState {
 
 class GetChannelMessagesFailed extends EmergencyChatState {}
 
+class DeleteMessageSuccess extends EmergencyChatState {}
 
-class DeleteMessageSuccess extends EmergencyChatState{}
-
-
-class DeleteMessageFailed extends EmergencyChatState{}
-
+class DeleteMessageFailed extends EmergencyChatState {}

@@ -13,6 +13,3 @@ class LoadPets extends EmergencyRequestEvent {
 
   LoadPets(this.clientId);
 }
-
-
-

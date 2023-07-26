@@ -24,7 +24,7 @@ class PrimaryButtonWidget extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 0,
-         // backgroundColor: color ?? const Color.fromRGBO(77, 122, 188, 1),
+          // backgroundColor: color ?? const Color.fromRGBO(77, 122, 188, 1),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),

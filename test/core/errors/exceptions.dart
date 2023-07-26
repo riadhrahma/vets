@@ -28,25 +28,17 @@ class AuthErrorInvalidCredential implements Exception {}
 
 //signIn errors
 
-class AuthErrorInvalidEmailSignIn  implements Exception{
+class AuthErrorInvalidEmailSignIn implements Exception {}
 
-}
-class AuthErrorWrongPassword  implements Exception{
+class AuthErrorWrongPassword implements Exception {}
 
-}
-class AuthErrorUserNotFound  implements Exception{
+class AuthErrorUserNotFound implements Exception {}
 
-}
-class AuthErrorUserDisabled  implements Exception{
+class AuthErrorUserDisabled implements Exception {}
 
-}
-class AuthErrorTooManyRequests  implements Exception{
+class AuthErrorTooManyRequests implements Exception {}
 
-}
-class AuthErrorOperationNotFound  implements Exception{
-
-}
-
+class AuthErrorOperationNotFound implements Exception {}
 
 class UserNotExistException implements Exception {}
 

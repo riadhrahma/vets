@@ -9,7 +9,7 @@ main() async {
   ///change the local db path
 
   final CachedDataSourceImpl cachedDataSourceImpl = CachedDataSourceImpl();
-  await cachedDataSourceImpl.initCashedDb({'veterinary','client'},'./');
+  await cachedDataSourceImpl.initCashedDb({'veterinary', 'client'}, './');
   group('cachedDataSourceImpl', () {
     test(
       'save veterinary data in cache',
@@ -57,7 +57,8 @@ main() async {
           isVip: true,
           role: 'role',
           clientCode: 'clientCode',
-          fcmToken: 'fcmToken', isEmergencyAgent: false,
+          fcmToken: 'fcmToken',
+          isEmergencyAgent: false,
         );
         await cachedDataSourceImpl.saveClientInfo(clientModel);
         ClientModel clientModelFromCash =
@@ -109,7 +110,5 @@ main() async {
         ),
       ),
     );
-
-
   });
 }

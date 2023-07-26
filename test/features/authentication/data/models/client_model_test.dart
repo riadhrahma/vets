@@ -20,7 +20,6 @@ main() {
         fcmToken: 'fcmToken',
       );
 
-
       expect(clientModel, isA<ClientEntity>());
     });
 
@@ -46,9 +45,9 @@ main() {
 
       expect(ClientModel.fromJson(result), isA<ClientEntity>());
 
-      clientModel.setFcmToken='fcm test';
+      clientModel.setFcmToken = 'fcm test';
       expect(clientModel.fcmToken, 'fcm test');
-      clientModel.setId='id example';
+      clientModel.setId = 'id example';
       expect(clientModel.id, 'id example');
       expect(clientModel.getClientEntity, isA<ClientEntity>());
     });

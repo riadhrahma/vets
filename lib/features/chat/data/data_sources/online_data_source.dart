@@ -331,7 +331,6 @@ class ChatOnlineDataSourceImpl implements ChatOnlineDataSource {
   ) async {
     FilePickerResult? result;
 
-
     switch (contentType) {
       case ContentType.image:
         {

@@ -96,7 +96,7 @@ class FirebaseDataSourceImpl implements AuthOnlineDataSource {
       if (e is FirebaseAuthException) {
         throw throw FirebaseAuthExceptionConverter.stringToSignupException(e);
       }
-      
+
       throw UnknownError();
     }
   }
@@ -294,11 +294,9 @@ class FirebaseDataSourceImpl implements AuthOnlineDataSource {
       final bool isVeterinary = await veterinaryIsExist(userUid);
 
       if (isVeterinary) {
-
         //veterinary process
         return await getVeterinaryInfo(userUid);
       } else {
-
         //client process
         return await getClientInfo(userUid);
       }

@@ -1,5 +1,3 @@
-
-
 abstract class SignInState {
   const SignInState();
 }

@@ -2,16 +2,15 @@ import 'package:bloc/bloc.dart';
 import 'package:vets_project/features/authentication/presentation/cubit/client_signup_cubit/client_signup_state.dart';
 
 class ClientSignupCubit extends Cubit<ClientSignupState> {
-
-  String?  profilePicture ;
+  String? profilePicture;
   String? firstName;
   String? lastName;
   String? phoneNumber;
   String? email;
   String? password;
-  String gender='homme';
+  String gender = 'homme';
   String? address;
-  bool isAssured=false;
+  bool isAssured = false;
 
   ClientSignupCubit() : super(ClientSignupInitial());
 
@@ -95,8 +94,8 @@ class ClientSignupCubit extends Cubit<ClientSignupState> {
     }
   }
 
-  bool addressIsValid(value){
-    return value.length>5;
+  bool addressIsValid(value) {
+    return value.length > 5;
   }
 
   void addressChanged(String value) {
@@ -109,8 +108,4 @@ class ClientSignupCubit extends Cubit<ClientSignupState> {
       emit(ClientSignupInitial());
     }
   }
-
-
-
-
 }

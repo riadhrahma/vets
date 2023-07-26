@@ -79,7 +79,6 @@ class CustomProfilePhoneFormField extends StatelessWidget {
             width: 0.5,
           ),
         ),
-
         hintStyle: const TextStyle(
           fontSize: 14,
           color: kBlueColor,

@@ -10,23 +10,23 @@ class GetMyPetsBloc extends Bloc<GetMyPetsEvent, GetMyPetsState> {
   GetMyPetsBloc({required this.getPetsUseCase}) : super(GetMyPetsInitial()) {
     on<GetMyPetsEvent>((event, emit) async {
       if (event is GetAllMyPetsEvent) {
-      emit(LoadingPetsState());
-      final result = await getPetsUseCase(auth.currentUser!.uid);
-      result.fold((l) {
-
-        emit(ErrorPetsState( message: l.runtimeType.toString()));
-      }, (r) {
-        emit(LoadedPetsState(pets: r));
-      });}
-    // if (event is GetAllMyPetsEvent) {
-    //   emit(LoadingPetsState());
-    //   final failureOrPets = await getPetsUseCase(auth.currentUser!.uid);
-    //   // emit(_mapFailureToMessage(failureOrPets));
-    // } else if (event is RefreshPetsEvent) {
-    //   emit(LoadingPetsState());
-    //   final failureOrPets = await getPetsUseCase(auth.currentUser!.uid);
-    //   // emit(_mapFailureToMessage(failureOrPets));
-    // }
+        emit(LoadingPetsState());
+        final result = await getPetsUseCase(auth.currentUser!.uid);
+        result.fold((l) {
+          emit(ErrorPetsState(message: l.runtimeType.toString()));
+        }, (r) {
+          emit(LoadedPetsState(pets: r));
+        });
+      }
+      // if (event is GetAllMyPetsEvent) {
+      //   emit(LoadingPetsState());
+      //   final failureOrPets = await getPetsUseCase(auth.currentUser!.uid);
+      //   // emit(_mapFailureToMessage(failureOrPets));
+      // } else if (event is RefreshPetsEvent) {
+      //   emit(LoadingPetsState());
+      //   final failureOrPets = await getPetsUseCase(auth.currentUser!.uid);
+      //   // emit(_mapFailureToMessage(failureOrPets));
+      // }
     });
   }
   // String _mapFailureToMessage(Failure failure) {

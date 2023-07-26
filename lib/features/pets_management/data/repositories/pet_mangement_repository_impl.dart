@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 
 import 'package:vets_project/core/common_used/network_Info/network_info.dart';
@@ -10,6 +9,7 @@ import 'package:vets_project/features/pets_management/data/models/pet_model.dart
 import 'package:vets_project/features/pets_management/domain/entities/pet_entity.dart';
 import 'package:vets_project/features/pets_management/domain/repositories/pet_management_repository.dart';
 import 'package:image_picker/image_picker.dart';
+
 typedef DeleteOrUpdateOrAddPets = Future<Unit> Function();
 
 class PetsMangementRepositoryImpl implements PetsMangementRepository {
@@ -52,16 +52,16 @@ class PetsMangementRepositoryImpl implements PetsMangementRepository {
 
   @override
   Future<Either<Failure, List<PetEntity>>> getMyPets(String clientID) async {
-      if (await networkInfo.isConnected) {
-        try {
-          final remotePets =
-              await petManagmentRemoteDataSource.getMyPets(clientID);
-         //petsCachedDataSource.savePets(remotePets);
-          return Right(remotePets);
-        } on ServerException {
-          return left(ServerFailure(''));
-        }
+    if (await networkInfo.isConnected) {
+      try {
+        final remotePets =
+            await petManagmentRemoteDataSource.getMyPets(clientID);
+        //petsCachedDataSource.savePets(remotePets);
+        return Right(remotePets);
+      } on ServerException {
+        return left(ServerFailure(''));
       }
+    }
     //  else {
     //    try {
     //      //final localPets = await petsCachedDataSource.getCachedPet();
@@ -126,11 +126,9 @@ class PetsMangementRepositoryImpl implements PetsMangementRepository {
     try {
       final result = await petManagmentRemoteDataSource.uploadFile(filePath);
       return right(result);
-    }
-    on ServerException catch (e) {
+    } on ServerException catch (e) {
       return left(ServerFailure(e.code));
-    }
-    on UnknownError {
+    } on UnknownError {
       return left(UnknownFailure());
     }
   }

@@ -32,7 +32,6 @@ class EmergencyChatBloc extends Bloc<EmergencyChatEvent, EmergencyChatState> {
     required this.deleteMessageUseCase,
   }) : super(EmergencyChatInitial()) {
     on<EmergencyChatEvent>((event, emit) async {
-
       if (event is GetChannelMessages) {
         final messages =
             await getChannelMessagesUseCase.getChannelMessages(event.channelId);
@@ -160,11 +159,9 @@ class EmergencyChatBloc extends Bloc<EmergencyChatEvent, EmergencyChatState> {
       }
 
       if (event is DeleteMessageEvent) {
-
         final result =
             await deleteMessageUseCase.deleteMessage(event.messageId);
         result.fold((l) {
-
           emit(DeleteMessageFailed());
         }, (r) {
           emit(DeleteMessageSuccess());

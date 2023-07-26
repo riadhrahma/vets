@@ -71,17 +71,16 @@ abstract class ChatRepository {
 
   Future<Either<Failure, List<PetModel>>> getMyPets(String clientId);
 
-  Future<Either<Failure, UserLocationModel>>  fetchUserLocation();
+  Future<Either<Failure, UserLocationModel>> fetchUserLocation();
 
   Future<Either<Failure, String>> createNewEmergencyRequestProcess(
-      String petId,
-      String clientId,
-      );
+    String petId,
+    String clientId,
+  );
 
   Future<Either<Failure, String>> uploadFile(
-      String filePath,
-      );
+    String filePath,
+  );
   Future<Either<Failure, Unit>> sendFileMessageProcess(ImageSource imageSource,
       ContentType contentType, MessageModel messageModel);
-
 }

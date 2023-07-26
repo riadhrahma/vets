@@ -40,12 +40,8 @@ class ClientWrongPhoneNumberState extends ClientSignupState {
   ClientWrongPhoneNumberState({this.phoneNumber});
 }
 
-
 class ClientWrongAddressState extends ClientSignupState {
   final String? address;
 
   ClientWrongAddressState({this.address});
 }
-
-
-

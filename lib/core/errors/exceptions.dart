@@ -55,23 +55,11 @@ class EmptyCachException implements Exception {}
 //fcm exceptions
 class NullFcmTokenException implements Exception {}
 
-
-
 // chat Exception
 
 class ChannelNotExistException implements Exception {}
 
 class MessageNotExistException implements Exception {}
-
-
-
-
-
-
-
-
-
-
 
 //fetch location exceptions
 
@@ -80,4 +68,3 @@ class LocationPermissionDeniedException implements Exception {}
 class LocationGpsDisabledException implements Exception {}
 
 class LocationGpsNullValuesException implements Exception {}
-

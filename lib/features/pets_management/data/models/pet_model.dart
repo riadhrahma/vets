@@ -45,6 +45,4 @@ class PetModel extends PetEntity {
         'ownerID': ownerID,
         'doctorsID': doctorsID,
       };
-
-
 }

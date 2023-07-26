@@ -341,7 +341,8 @@ class _ChooseRoleScreenState extends State<ChooseRoleScreen> {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(const SnackBar(
                                                 content: Text(
-                                                    'all fields is mandatory',)));
+                                          'all fields is mandatory',
+                                        )));
                                       }
                                     },
                                   );

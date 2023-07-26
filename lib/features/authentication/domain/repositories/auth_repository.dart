@@ -59,14 +59,15 @@ abstract class AuthRepository {
   );
 
   Future<Either<Failure, Unit>> clientSignupProcess(
-      ClientEntity clientEntity,
-      String password,
-      );
+    ClientEntity clientEntity,
+    String password,
+  );
 
   Future<Either<Failure, ClientModel>> getCachedClientInfo();
   Future<Either<Failure, Unit>> saveClientInfo(ClientEntity clientEntity);
   Future<Either<Failure, VeterinaryModel>> getCachedVeterinaryInfo();
-  Future<Either<Failure, Unit>> saveVeterinaryInfo(VeterinaryEntity veterinaryEntity);
+  Future<Either<Failure, Unit>> saveVeterinaryInfo(
+      VeterinaryEntity veterinaryEntity);
 
   Future<Either<Failure, Unit>> removeClientInfo();
   Future<Either<Failure, Unit>> removeVeterinaryInfo();

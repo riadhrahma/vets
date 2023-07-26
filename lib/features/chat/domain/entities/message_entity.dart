@@ -9,9 +9,9 @@ class MessageEntity extends Equatable {
   final String recipientID;
   final String senderRole;
   final String channelID;
-   MessageContentModel messageContentModel;
+  MessageContentModel messageContentModel;
 
-   MessageEntity({
+  MessageEntity({
     required this.id,
     required this.senderID,
     required this.recipientID,

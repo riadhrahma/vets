@@ -13,7 +13,6 @@ class ProfileRepositoryImpl implements ProfileRepository {
 
   @override
   Future<Either<Failure, Unit>> updateProfile(ClientEntity clientEntity) async {
-
     await profileOnlineDataSource.updateProfile(clientEntity);
     return right(unit);
   }

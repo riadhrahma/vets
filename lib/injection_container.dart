@@ -60,7 +60,7 @@ final sl = GetIt.instance;
 Future<void> init() async {
   //sign in bloc
   sl.registerFactory(
-        () => SignInBloc(
+    () => SignInBloc(
       //inputConverter: sl(),
       //signIn: sl(),
       //fetchVeterinaryInfoUseCase: sl(),
@@ -83,68 +83,69 @@ Future<void> init() async {
   // Bloc
 
   sl.registerFactory(() => AddPetsBloc(
-    addNewPetUseCase: sl(),
-  ));
+        addNewPetUseCase: sl(),
+      ));
 
   sl.registerFactory(
-        () => AddPetCubit(uploadImageUseCase: sl(), pickImageUseCase: sl()),
+    () => AddPetCubit(uploadImageUseCase: sl(), pickImageUseCase: sl()),
   );
 
   sl.registerFactory(
-        () => GetMyPetsBloc(getPetsUseCase: sl()),
+    () => GetMyPetsBloc(getPetsUseCase: sl()),
   );
 
   sl.registerFactory(
-        () => VeterinarySignupCubit(
-      //inputConverter: sl(),
-      //signIn: sl(),
-      //fetchVeterinaryInfoUseCase: sl(),
-      //veterinaryIsExistUseCase: sl(),
-      //signInProcessUseCase: sl(),
-    ),
+    () => VeterinarySignupCubit(
+        //inputConverter: sl(),
+        //signIn: sl(),
+        //fetchVeterinaryInfoUseCase: sl(),
+        //veterinaryIsExistUseCase: sl(),
+        //signInProcessUseCase: sl(),
+        ),
   );
   sl.registerFactory(
-        () => VeterinarySignupBloc(
-      //inputConverter: sl(),
-      //signIn: sl(),
-      //fetchVeterinaryInfoUseCase: sl(),
-      //veterinaryIsExistUseCase: sl(),
-      // signInProcessUseCase: sl(),
+    () => VeterinarySignupBloc(
+        //inputConverter: sl(),
+        //signIn: sl(),
+        //fetchVeterinaryInfoUseCase: sl(),
+        //veterinaryIsExistUseCase: sl(),
+        // signInProcessUseCase: sl(),
         veterinarySignupProcessUseCase: sl(),
         saveCachedVeterinaryInfoUseCase: sl()),
   );
 
   sl.registerFactory(
-        () => UpdateProfileBloc(updateProfileUseCase: sl()),
+    () => UpdateProfileBloc(updateProfileUseCase: sl()),
   );
   sl.registerFactory(
-        () => ClientSignupBloc(
-      //inputConverter: sl(),
-      //signIn: sl(),
-      //fetchVeterinaryInfoUseCase: sl(),
-      //veterinaryIsExistUseCase: sl(),
-      // signInProcessUseCase: sl(),
+    () => ClientSignupBloc(
+        //inputConverter: sl(),
+        //signIn: sl(),
+        //fetchVeterinaryInfoUseCase: sl(),
+        //veterinaryIsExistUseCase: sl(),
+        // signInProcessUseCase: sl(),
         clientSignupProcessUseCase: sl(),
         saveCachedClientInfoUseCase: sl()),
   );
 
   sl.registerFactory(() => EmergencyRequestBloc(
-    getMyPetsUseCase: sl(),
-    createNewEmergencyRequestProcessUseCase: sl(),
-  ));
+        getMyPetsUseCase: sl(),
+        createNewEmergencyRequestProcessUseCase: sl(),
+      ));
 
   sl.registerFactory(
-        () => EmergencyChatBloc(
+    () => EmergencyChatBloc(
       getChannelMessagesUseCase: sl(),
       sendMessageUseCase: sl(),
       uploadFileUseCase: sl(),
       pickFilesUseCase: sl(),
-      sendFileMessageUseCase: sl(), deleteMessageUseCase: sl(),
+      sendFileMessageUseCase: sl(),
+      deleteMessageUseCase: sl(),
     ),
   );
 
   sl.registerLazySingleton<ChatRepository>(
-          () => ChatRepositoryImpl(chatOnlineDataSourceImpl: sl()));
+      () => ChatRepositoryImpl(chatOnlineDataSourceImpl: sl()));
   // Use cases
   sl.registerLazySingleton(() => SignInWithEmailAndPasswordUseCase(sl()));
   sl.registerLazySingleton(() => FetchVeterinaryInfoUseCase(sl()));
@@ -176,7 +177,7 @@ Future<void> init() async {
 
   // Repository
   sl.registerLazySingleton<PetsMangementRepository>(
-        () => PetsMangementRepositoryImpl(
+    () => PetsMangementRepositoryImpl(
       networkInfo: sl(),
       // petsCachedDataSource: sl(),
       petManagmentRemoteDataSource: sl(),
@@ -184,7 +185,7 @@ Future<void> init() async {
   );
 
   sl.registerLazySingleton<AuthRepository>(
-        () => AuthRepositoryImpl(
+    () => AuthRepositoryImpl(
       networkInfo: sl(),
       authOnlineDataSource: sl(),
       cachedDataSource: sl(),
@@ -192,36 +193,36 @@ Future<void> init() async {
   );
 
   sl.registerLazySingleton<ProfileRepository>(
-        () => ProfileRepositoryImpl(profileOnlineDataSource: sl()),
+    () => ProfileRepositoryImpl(profileOnlineDataSource: sl()),
   );
 
   // Data sources
   FirebaseAuth auth = FirebaseAuth.instance;
   sl.registerLazySingleton<AuthOnlineDataSource>(
-        () => FirebaseDataSourceImpl(FirebaseFirestore.instance, auth),
+    () => FirebaseDataSourceImpl(FirebaseFirestore.instance, auth),
   );
   sl.registerLazySingleton<CachedDataSource>(
-        () => CachedDataSourceImpl(),
+    () => CachedDataSourceImpl(),
   );
 
   //new
   sl.registerLazySingleton<PetsCachedDataSource>(
-        () => HiveCachedDataSource(),
+    () => HiveCachedDataSource(),
   );
 
   sl.registerLazySingleton<PetManagmentRemoteDataSource>(
-        () => FirebasePetMangementDataSource(),
+    () => FirebasePetMangementDataSource(),
   );
 
   sl.registerLazySingleton(
-        () => ChatOnlineDataSourceImpl(
+    () => ChatOnlineDataSourceImpl(
       FirebaseFirestore.instance,
       auth,
     ),
   );
 
   sl.registerLazySingleton<ProfileOnlineDataSource>(
-        () => ProfileDataSourceImpl(
+    () => ProfileDataSourceImpl(
       FirebaseFirestore.instance,
       auth,
     ),

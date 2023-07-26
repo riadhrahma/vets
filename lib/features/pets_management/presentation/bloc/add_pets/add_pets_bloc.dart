@@ -9,14 +9,10 @@ part 'add_pets_state.dart';
 class AddPetsBloc extends Bloc<AddPetsEvent, AddPetsState> {
   final AddNewPetUseCase addNewPetUseCase;
 
-  AddPetsBloc( {
-
+  AddPetsBloc({
     required this.addNewPetUseCase,
-
-
   }) : super(AddPetsInitial()) {
     on<AddPetsEvent>((event, emit) async {
-
       if (event is AddPet) {
         final result = await addNewPetUseCase.addNewPet(
           event.petEntity,
@@ -24,7 +20,6 @@ class AddPetsBloc extends Bloc<AddPetsEvent, AddPetsState> {
         result.fold((l) {
           emit(UnknownErrorSate());
         }, (r) {
-
           emit(AddPetsSuccessState());
         });
       }

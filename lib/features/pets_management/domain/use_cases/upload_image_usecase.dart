@@ -6,11 +6,7 @@ class UploadImageUseCase {
   final PetsMangementRepository petsMangementRepository;
   const UploadImageUseCase(this.petsMangementRepository);
 
-  Future<Either<Failure, String>> uploadFile(
-    String filePath
-  ) async {
-    return await petsMangementRepository.uploadFile(
-        filePath
-    );
+  Future<Either<Failure, String>> uploadFile(String filePath) async {
+    return await petsMangementRepository.uploadFile(filePath);
   }
 }
