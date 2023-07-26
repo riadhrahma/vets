@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "510594999137",
+    "project_id": "my-vest-project",
+    "storage_bucket": "my-vest-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510594999137:android:e996d86932b6dd55551b20",
+        "android_client_info": {
+          "package_name": "com.myvets.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510594999137-05veerpni9tkmke6nijlmajfhub0atfl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myvets.client",
+            "certificate_hash": "e6564c1b732927395c76b39640196bfea8637687"
+          }
+        },
+        {
+          "client_id": "510594999137-94b43ecvnbj8kpqhbaipr71mv44g11rm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_OC_wNjcHkQyhj9gizo-kU8t68qLyIRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510594999137-94b43ecvnbj8kpqhbaipr71mv44g11rm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

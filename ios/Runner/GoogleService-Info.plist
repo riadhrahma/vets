@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>510594999137-pkkuncr21taho7c7bd6j70oa13h5n8bv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.510594999137-pkkuncr21taho7c7bd6j70oa13h5n8bv</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>510594999137-05veerpni9tkmke6nijlmajfhub0atfl.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAmmq0bRzo3fQm0U8Vr9B38s0kfn72SwT0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>510594999137</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.vetsProject</string>
+	<key>PROJECT_ID</key>
+	<string>my-vest-project</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-vest-project.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:510594999137:ios:a4210f71099bcb56551b20</string>
+</dict>
+</plist>
